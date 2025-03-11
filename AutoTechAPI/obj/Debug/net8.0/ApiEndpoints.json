@@ -37,6 +37,22 @@
   },
   {
     "ContainingType": "AutoTechAPI.Controllers.AuthController",
+    "Method": "UpdateUser",
+    "RelativePath": "Auth",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "AutoTechAPI.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoTechAPI.Controllers.AuthController",
     "Method": "GetUserById",
     "RelativePath": "Auth/{id}",
     "HttpMethod": "GET",
@@ -60,27 +76,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "AutoTechAPI.Controllers.AuthController",
-    "Method": "UpdateUser",
-    "RelativePath": "Auth/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "user",
-        "Type": "AutoTechAPI.Models.User",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "AutoTechAPI.Controllers.AuthController",

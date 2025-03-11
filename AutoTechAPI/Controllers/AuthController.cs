@@ -25,7 +25,7 @@ namespace AutoTechAPI.Controllers
         [HttpGet("{id}")]
         public async Task<User> GetUserById(int id)
         {
-            return await _context.Users.Where(u => u.Id == id).FirstOrDefaultAsync();
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
         }
 
         [HttpPost]
@@ -36,11 +36,10 @@ namespace AutoTechAPI.Controllers
             return StatusCode(201, user);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
+        [HttpPut]
+        public async Task<IActionResult> UpdateUser([FromBody] User user)
         {
-            var userToUpdate = await _context.Users.FindAsync(id);
-            _context.Update(userToUpdate);
+            _context.Entry(user).State = EntityState.Modified;
 
             await _context.SaveChangesAsync();
             return StatusCode(200);
