@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoTechAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b368bfadc31775eb274567463e96eea5268c9e5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+410efad1d8737e332d118441a78517efabfcde14")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoTechAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoTechAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,15 @@
+# Ignorar a pasta do Visual Studio
+.vs/
+
+# Ignorar binários e compilados
+bin/
+obj/
+
+# Ignorar arquivos de configuração específicos do usuário
+.vscode/
+
+# Ignorar arquivos de dependências do NuGet
+packages/
+
+# Ignorar arquivos de logs
+*.log

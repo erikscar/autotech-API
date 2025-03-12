@@ -1,55 +1,42 @@
 ﻿using AutoTechAPI.Interfaces;
 using AutoTechAPI.Models;
+using AutoTechAPI.Services;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace AutoTechAPI.Controllers
 {
-    [Route("[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        private readonly IUserRepository userRepository;
-
-        public AuthController(IUserRepository userRepository)
+        private readonly IUserRepository _userRepository;
+        private readonly TokenService _tokenService;
+        public AuthController(IUserRepository userRepository, TokenService tokenservice)
         {
-            this.userRepository = userRepository;
+            _userRepository = userRepository;
+            _tokenService = tokenservice;
+        }
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] User user)
+        {
+            await _userRepository.CreateUser(user);
+
+            return Ok();
         }
 
-        [HttpGet]
-        public async Task<IEnumerable<User>> GetUsers()
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] User user)
         {
-            return await userRepository.GetUsers();
-        }
+            var res = await _userRepository.GetUserById(user.Id);
 
-        [HttpGet("{id}")]
-        public async Task<User> GetUserById(int id)
-        {
-            return await userRepository.GetUserById(id);
-        }
+            if(res == null) 
+            {
+                return BadRequest();
+            }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateUser([FromBody] User user)
-        {
-            await userRepository.CreateUser(user);
-            await userRepository.SaveAll();
-            return StatusCode(201, user);
-        }
+            var token = _tokenService.GenerateToken(user);
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateUser([FromBody] User user)
-        {
-            userRepository.UpdateUser(user);
-            await userRepository.SaveAll();
-            return StatusCode(200);
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
-        {
-            await userRepository.DeleteUser(id);
-            await userRepository.SaveAll();
-            return StatusCode(200);
+            return Ok(new { token });
         }
     }
 }

@@ -169,3 +169,6 @@ C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\refint\AutoTech
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\AutoTechAPI.pdb
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\AutoTechAPI.genruntimeconfig.cache
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\ref\AutoTechAPI.dll
+C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\obj\Debug\net8.0\AutoTechAPI.sourcelink.json
+C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
