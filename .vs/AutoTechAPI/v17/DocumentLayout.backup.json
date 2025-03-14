@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|c:\\users\\eriks\\source\\repos\\autotechapi\\autotechapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|solutionrelative:autotechapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|c:\\users\\eriks\\source\\repos\\autotechapi\\autotechapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|solutionrelative:autotechapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|c:\\users\\eriks\\source\\repos\\autotechapi\\autotechapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|solutionrelative:autotechapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|c:\\users\\eriks\\source\\repos\\autotechapi\\autotechapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|solutionrelative:autotechapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F93DAD7-D2F0-40D0-BC9D-FCC7F8D94F53}|AutoTechAPI\\AutoTechAPI.csproj|c:\\users\\eriks\\source\\repos\\autotechapi\\autotechapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -40,46 +40,46 @@
               "RelativeDocumentMoniker": "AutoTechAPI\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "AutoTechAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T17:50:37.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "AutoTechAPI\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "AutoTechAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T17:50:25.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Program.cs",
               "RelativeDocumentMoniker": "AutoTechAPI\\Program.cs",
               "ToolTip": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Program.cs*",
               "RelativeToolTip": "AutoTechAPI\\Program.cs*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T15:04:52.499Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TokenService.cs",
               "DocumentMoniker": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "AutoTechAPI\\Services\\TokenService.cs",
               "ToolTip": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\Services\\TokenService.cs",
               "RelativeToolTip": "AutoTechAPI\\Services\\TokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T14:26:37.719Z",
               "EditorCaption": ""
