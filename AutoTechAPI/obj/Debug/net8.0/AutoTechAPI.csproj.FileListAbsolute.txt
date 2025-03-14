@@ -172,3 +172,5 @@ C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\ref\AutoTechAPI
 C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\obj\Debug\net8.0\AutoTechAPI.sourcelink.json
 C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll

@@ -18,7 +18,6 @@ namespace AutoTechAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IEnumerable<User>> GetUsers()
         {
             return await userRepository.GetUsers();
