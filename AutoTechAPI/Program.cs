@@ -18,13 +18,12 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("CORSPolicy", policy =>
-    {
-        policy.AllowAnyHeader().
-        AllowAnyMethod().
-        AllowAnyOrigin();
-    });
+    options.AddPolicy("CorsPolicy",
+        builder => builder.WithOrigins("http://localhost:4200") // Porta do Angular
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
 });
+
 var key = Encoding.ASCII.GetBytes("x+d3Bx+a2PBr+w3dY+QyGpUz3zI0imvkhYbsQGpQ4kF0KPFP6rhL2H8lhznsTSfgUkKSm99FVJc6YN6eTcqYpw==");
 
 builder.Services.AddAuthentication(x =>
@@ -53,5 +52,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors("CORSPolicy");
+app.UseCors("CorsPolicy");
 app.Run();

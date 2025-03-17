@@ -20,8 +20,9 @@ namespace AutoTechAPI.Controllers
         public async Task<IActionResult> Register([FromBody] User user)
         {
             await _userRepository.CreateUser(user);
+            await _userRepository.SaveAll();
+            return Ok(new { message = "Usuário cadastrado com sucesso!" });
 
-            return Ok();
         }
 
         [HttpPost("login")]
