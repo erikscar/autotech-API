@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "TWeNSZA3kUY=",
+=======
+  "dgSpecHash": "47s5GXbjRd8=",
+>>>>>>> e04ef79b1935e70bab2fc8702463e3906654d87c
   "success": true,
-  "projectFilePath": "C:\\Users\\eriks\\Desktop\\autotech-API\\AutoTechAPI\\AutoTechAPI.csproj",
+  "projectFilePath": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\AutoTechAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eriks\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\eriks\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

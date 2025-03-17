@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eriks\\Desktop\\autotech-API\\AutoTechAPI\\AutoTechAPI.csproj": {}
+    "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\AutoTechAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eriks\\Desktop\\autotech-API\\AutoTechAPI\\AutoTechAPI.csproj": {
+    "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\AutoTechAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eriks\\Desktop\\autotech-API\\AutoTechAPI\\AutoTechAPI.csproj",
+        "projectUniqueName": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\AutoTechAPI.csproj",
         "projectName": "AutoTechAPI",
-        "projectPath": "C:\\Users\\eriks\\Desktop\\autotech-API\\AutoTechAPI\\AutoTechAPI.csproj",
+        "projectPath": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\AutoTechAPI.csproj",
         "packagesPath": "C:\\Users\\eriks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eriks\\Desktop\\autotech-API\\AutoTechAPI\\obj\\",
+        "outputPath": "C:\\Users\\eriks\\source\\repos\\AutoTechAPI\\AutoTechAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
