@@ -16,6 +16,7 @@ builder.Services.AddDbContext<AutoTechDbContext>(options =>
 });
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<PasswordService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CORSPolicy", policy =>

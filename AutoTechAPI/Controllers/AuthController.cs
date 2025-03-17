@@ -11,17 +11,21 @@ namespace AutoTechAPI.Controllers
     {
         private readonly IUserRepository _userRepository;
         private readonly TokenService _tokenService;
-        public AuthController(IUserRepository userRepository, TokenService tokenservice)
+        private readonly PasswordService _passwordService;
+        public AuthController(IUserRepository userRepository, TokenService tokenservice, PasswordService passwordService)
         {
             _userRepository = userRepository;
             _tokenService = tokenservice;
+            _passwordService = passwordService;
         }
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
         {
+            user.HashPassword = _passwordService.HashPassword(user.HashPassword);
             await _userRepository.CreateUser(user);
+            await _userRepository.SaveAll();
 
-            return Ok();
+            return Ok(new { message = "User registered successfully: " + user.Name });
         }
 
         [HttpPost("login")]

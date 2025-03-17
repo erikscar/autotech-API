@@ -11,9 +11,8 @@ namespace AutoTechAPI.Models
         public int Id { get; set; }
 
         [Column("name")]
-        [Required]
         [MaxLength(100)]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Column("email")]
         [Required]
@@ -34,7 +33,7 @@ namespace AutoTechAPI.Models
 
 //CREATE TABLE Users (
 //id INT IDENTITY(1, 1) PRIMARY KEY,
-//name NVARCHAR(100) NOT NULL,
+//name NVARCHAR(100),
 //email NVARCHAR(100) NOT NULL,
 //hash_password NVARCHAR(100) NOT NULL,
 //created_at DATETIME2 DEFAULT SYSDATETIME()

@@ -162,7 +162,6 @@ C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\staticwebassets
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.AutoTechAPI.props
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AutoTechAPI.props
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\AutoTech.BB500A83.Up2Date
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\AutoTechAPI.dll
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\obj\Debug\net8.0\refint\AutoTechAPI.dll
@@ -174,3 +173,4 @@ C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\bin\Debug\net8.0\Microsoft.A
 C:\Users\eriks\source\repos\AutoTechAPI\AutoTechAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\eriks\Desktop\autotech-API\AutoTechAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
