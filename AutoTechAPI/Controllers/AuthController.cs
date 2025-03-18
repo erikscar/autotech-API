@@ -25,22 +25,29 @@ namespace AutoTechAPI.Controllers
             await _userRepository.CreateUser(user);
             await _userRepository.SaveAll();
 
-            return Ok(new { message = "User registered successfully: " + user.Name });
+            var token = _tokenService.GenerateToken(user);
+
+            return Ok(new { token });
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] User user)
         {
-            var res = await _userRepository.GetUserById(user.Id);
+            var res = await _userRepository.GetUserByEmail(user.Email);
 
             if(res == null) 
             {
-                return BadRequest();
+                return BadRequest("Usuário Não Encontrado");
             }
 
-            var token = _tokenService.GenerateToken(user);
+            if(user.Email == res.Email && _passwordService.VerifyHashPassword(user.HashPassword, res.HashPassword))
+            {
+                var token = _tokenService.GenerateToken(res);
 
-            return Ok(new { token });
+                return Ok(new { token });
+            }
+
+            return BadRequest();
         }
     }
 }

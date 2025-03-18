@@ -10,32 +10,41 @@ namespace AutoTechAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository userRepository;
+        private readonly IUserRepository _userRepository;
 
         public UserController(IUserRepository userRepository)
         {
-            this.userRepository = userRepository;
+            _userRepository = userRepository;
         }
 
         [HttpGet]
         public async Task<IEnumerable<User>> GetUsers()
         {
-            return await userRepository.GetUsers();
+            return await _userRepository.GetUsers();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
         [Authorize]
-        public async Task<User> GetUserById(int id)
+        public async Task<User> GetUserByEmail(string email)
         {
-            return await userRepository.GetUserById(id);
+            return await _userRepository.GetUserByEmail(email);
+        }
+
+        [HttpGet("profile")]
+        [Authorize]
+        public async Task<User> GetUserByToken()
+        {
+            var id = int.Parse(User.FindFirst("UserId")?.Value);
+
+            return await _userRepository.GetUserById(id);
         }
 
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> CreateUser([FromBody] User user)
         {
-            await userRepository.CreateUser(user);
-            await userRepository.SaveAll();
+            await _userRepository.CreateUser(user);
+            await _userRepository.SaveAll();
             return StatusCode(201, user);
         }
 
@@ -43,8 +52,8 @@ namespace AutoTechAPI.Controllers
         [Authorize]
         public async Task<IActionResult> UpdateUser([FromBody] User user)
         {
-            userRepository.UpdateUser(user);
-            await userRepository.SaveAll();
+            _userRepository.UpdateUser(user);
+            await _userRepository.SaveAll();
             return StatusCode(200);
         }
 
@@ -52,8 +61,8 @@ namespace AutoTechAPI.Controllers
         [Authorize]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            await userRepository.DeleteUser(id);
-            await userRepository.SaveAll();
+            await _userRepository.DeleteUser(id);
+            await _userRepository.SaveAll();
             return StatusCode(200);
         }
     }

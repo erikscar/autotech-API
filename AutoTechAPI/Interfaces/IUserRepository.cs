@@ -5,6 +5,7 @@ namespace AutoTechAPI.Interfaces
     public interface IUserRepository
     {
         Task<IEnumerable<User>> GetUsers();
+        Task<User> GetUserByEmail(string email);
         Task<User> GetUserById(int id);
         Task CreateUser(User user);
         void UpdateUser(User user);

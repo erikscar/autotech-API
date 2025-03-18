@@ -2,7 +2,6 @@
 using AutoTechAPI.Interfaces;
 using AutoTechAPI.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace AutoTechAPI.Repositories
 {
@@ -26,7 +25,12 @@ namespace AutoTechAPI.Repositories
             _context.Users.Remove(userToDelete);
         }
 
-        public async Task<User> GetUserById(int id)
+        public async Task<User> GetUserByEmail(string email)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+        }
+
+         public async Task<User> GetUserById(int id)
         {
             return await _context.Users.FindAsync(id);
         }

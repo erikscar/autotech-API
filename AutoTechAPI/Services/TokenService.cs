@@ -8,7 +8,7 @@ namespace AutoTechAPI.Services
 {
     public class TokenService
     {
-        public  object GenerateToken(User user)
+        public string GenerateToken(User user)
         {
             var key = Encoding.ASCII.GetBytes("x+d3Bx+a2PBr+w3dY+QyGpUz3zI0imvkhYbsQGpQ4kF0KPFP6rhL2H8lhznsTSfgUkKSm99FVJc6YN6eTcqYpw==");
             var tokenConfig = new SecurityTokenDescriptor
@@ -23,12 +23,8 @@ namespace AutoTechAPI.Services
 
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenConfig);
-            string tokenString = tokenHandler.WriteToken(token);
 
-            return new
-            {
-                token = tokenString
-            };
+            return tokenHandler.WriteToken(token);
         }
     }
 }
