@@ -1,6 +1,7 @@
 ﻿using AutoTechAPI.Interfaces;
 using AutoTechAPI.Models;
 using AutoTechAPI.Services;
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoTechAPI.Controllers
@@ -18,6 +19,7 @@ namespace AutoTechAPI.Controllers
             _tokenService = tokenservice;
             _passwordService = passwordService;
         }
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
         {
@@ -48,6 +50,34 @@ namespace AutoTechAPI.Controllers
             }
 
             return BadRequest();
+        }
+
+        [HttpPost("google-login")]
+        public async Task<IActionResult> GoogleLogin(string credential)
+        {
+            var payload = await GoogleJsonWebSignature.ValidateAsync(credential);
+
+            if (payload == null) {
+                return BadRequest("Google Payload Error");
+            }
+
+            User user = await _userRepository.GetUserByEmail(payload.Email);
+
+            if(user == null)
+            {
+                User newUser = new User { Email = payload.Email, HashPassword = ""};
+                await _userRepository.CreateUser(newUser);
+                var token = _tokenService.GenerateToken(newUser);
+
+                return Ok (new { token });
+
+            }
+            else 
+            {
+                var token = _tokenService.GenerateToken(user);
+
+                return Ok (new { token });
+            }
         }
     }
 }
