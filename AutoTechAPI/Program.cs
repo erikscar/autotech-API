@@ -1,7 +1,8 @@
-using AutoTechAPI.Data;
+﻿using AutoTechAPI.Data;
 using AutoTechAPI.Interfaces;
 using AutoTechAPI.Repositories;
 using AutoTechAPI.Services;
+using Google.Apis.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -46,8 +47,6 @@ builder.Services.AddAuthentication(x =>
 });
 
 var app = builder.Build();
-
-
 
 app.UseCors("CorsPolicy");
 
