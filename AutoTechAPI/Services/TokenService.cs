@@ -13,10 +13,10 @@ namespace AutoTechAPI.Services
             var key = Encoding.ASCII.GetBytes("x+d3Bx+a2PBr+w3dY+QyGpUz3zI0imvkhYbsQGpQ4kF0KPFP6rhL2H8lhznsTSfgUkKSm99FVJc6YN6eTcqYpw==");
             var tokenConfig = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(
-                [
-                    new Claim("UserId", user.Id.ToString())
-                ]),
+                Subject = new ClaimsIdentity(new[]
+                {
+            new Claim("UserId", user.Id.ToString())
+        }),
                 Expires = DateTime.UtcNow.AddHours(3),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
@@ -26,5 +26,6 @@ namespace AutoTechAPI.Services
 
             return tokenHandler.WriteToken(token);
         }
+
     }
 }

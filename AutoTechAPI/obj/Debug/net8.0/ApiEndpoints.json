@@ -143,6 +143,22 @@
   },
   {
     "ContainingType": "AutoTechAPI.Controllers.UserController",
+    "Method": "SearchUserByEmail",
+    "RelativePath": "api/User/email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoTechAPI.Controllers.UserController",
     "Method": "GetUserByToken",
     "RelativePath": "api/User/profile",
     "HttpMethod": "GET",

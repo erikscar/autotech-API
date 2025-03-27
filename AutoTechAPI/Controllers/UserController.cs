@@ -1,5 +1,6 @@
 ﻿using AutoTechAPI.Interfaces;
 using AutoTechAPI.Models;
+using AutoTechAPI.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,12 @@ namespace AutoTechAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
+        private readonly PasswordService _passwordService;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository, PasswordService passwordService)
         {
             _userRepository = userRepository;
+            _passwordService = passwordService;
         }
 
         [HttpGet]
@@ -39,6 +42,20 @@ namespace AutoTechAPI.Controllers
             return await _userRepository.GetUserById(id);
         }
 
+        [HttpPost("email")]
+        public async Task<IActionResult> SearchUserByEmail([FromBody] string email)
+        {
+
+            User user = await _userRepository.GetUserByEmail(email);
+
+            if(user == null)
+            {
+                return (BadRequest("Email Informado Invalido!"));   
+            }
+
+            return Ok(user);
+        }
+
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> CreateUser([FromBody] User user)
@@ -49,11 +66,22 @@ namespace AutoTechAPI.Controllers
         }
 
         [HttpPut]
-        [Authorize]
         public async Task<IActionResult> UpdateUser([FromBody] User user)
         {
-            _userRepository.UpdateUser(user);
-            await _userRepository.SaveAll();
+            User userToUpdate = await _userRepository.GetUserByEmail(user.Email);
+
+            try
+            {
+                userToUpdate.HashPassword = _passwordService.HashPassword(user.HashPassword);
+
+                _userRepository.UpdateUser(userToUpdate);
+                await _userRepository.SaveAll();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
             return StatusCode(200);
         }
 

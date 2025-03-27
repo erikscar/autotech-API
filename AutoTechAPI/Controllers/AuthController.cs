@@ -59,21 +59,27 @@ namespace AutoTechAPI.Controllers
             var payload = await GoogleJsonWebSignature.ValidateAsync(request.Credential);
 
             User user = await _userRepository.GetUserByEmail(payload.Email);
-;
-            if (user == null)
-            {
-                User newUser = new User { Email = payload.Email, HashPassword = "" };
-               await _userRepository.CreateUser(newUser);
-                var token = _tokenService.GenerateToken(newUser);
+;           
 
-               return Ok(new { tokenId = token });
+            if(user == null)
+            {
+                await _userRepository.CreateUser(new User { Email = payload.Email, HashPassword= ""});
+                await _userRepository.SaveAll();
+                user = await _userRepository.GetUserByEmail(payload.Email);
+
+                var token = _tokenService.GenerateToken(user);
+                Console.WriteLine("Usuario: " + user.Email);
+                return Ok(new { user, token });
             }
             else
             {
-              var token = _tokenService.GenerateToken(user);
-               return Ok(new { tokenId = token });
-           }
+                var token = _tokenService.GenerateToken(user);
+
+                Console.WriteLine("Usuario: " + user.Email);
+                return Ok(new { user, token });
+            }
+        }
+            
         }
 
     }
-}
